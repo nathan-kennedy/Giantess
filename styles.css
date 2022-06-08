@@ -6,37 +6,49 @@ font-family: yorkten-slab-normal, sans-serif; */
 }
 html {
     background-color: rgb(255, 255, 255);
-    --shadow: rgb(185, 183, 183);
+    --shadow: rgb(232, 229, 229);
 }
 body {
     width: 100%;
 }
 nav {
+    width: 100%;
+    position: fixed;
+    height: 2rem;
+    background-color: aliceblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 ul {
+    padding-right: 1rem;
     display: flex;
     flex-direction: row;
     list-style: none;
     display: inline-block;
 }
 li {
+    margin-top: .4rem;
+    padding: 0 1rem;
+    font-family: good-karma-caps, sans-serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);     
     display: inline-block;
 }
 .logo {
     display: inline-block;
-    max-width: 20rem;
+    width: clamp(8rem, 10rem, 12rem);
+    margin-top: 1rem;
 }
 .grid {
+    padding: 2.8rem 0 0 0;
     box-sizing: border-box;
     overflow: hidden;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(8, max(12.5vw));  
-    grid-template-rows: repeat(8, max(12.5vw));    
-    gap: .4rem;
+    grid-template-columns: repeat(8, max(12.1vw));  
+    grid-template-rows: repeat(8, max(12.1vw));    
+    gap: .8rem;
 }
 .grid div {
     box-shadow: 3px 2px 2px var(--shadow);
@@ -50,7 +62,7 @@ li {
 .tile-1 {
     background: url(/images/tiles/logan_productions_logo.png);
     grid-row: 1 / span 1;
-    grid-column: 4 / span 1;
+    grid-column: 5 / span 1;
 }
 .tile-2 {
     background: url(/images/tiles/nate-kennedy47.jpg);
@@ -59,13 +71,13 @@ li {
 }
 .tile-3 {
     background: url(/images/tiles/owl_walk_logo.png);
-    grid-row: 1 / span 3;
+    grid-row: 3 / span 3;
     grid-column: 1 / span 3;
 }
 .tile-4 {
     background: url(/images/tiles/01-Logo-free-mockup-by-mockupcloud.png);
     grid-row: 1 / span 1;
-    grid-column: 5 / span 1;
+    grid-column: 4 / span 1;
 }
 .tile-5 {
     background: url(/images/tiles/EAIL-comp.png);
@@ -76,10 +88,9 @@ li {
     background: url(/images/tiles/cert.png);
     grid-row: 3 / span 2;
     grid-column: 6 / span 3;
-    background-position: center;
 }
 .tile-7 {
-    background: url(/images/tiles/fpf.jpg);
+    background: url(/images/tiles/logan-stationary.png);
     grid-row: 2 / span 4;
     grid-column: 4 / span 2;
     background-position: center;
@@ -104,7 +115,7 @@ li {
 }
 .tile-11 {
     background: url(/images/tiles/Sheeaun-Academy-comp.png);
-    grid-row: 4 / span 2;
+    grid-row: 1 / span 2;
     grid-column: 1 / span 3;
 }
 .tile-12 {
