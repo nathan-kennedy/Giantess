@@ -1,21 +1,27 @@
 /* font-family: good-karma-caps, sans-serif;
 font-family: yorkten-slab-normal, sans-serif; */
-* {
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 html {
-    background-color: rgb(255, 255, 255);
-    --shadow: rgb(232, 229, 229);
+    background-color: rgb(39, 39, 39);
+    --shadow: rgb(0, 0, 0);
+    --light-color: rgb(224, 229, 237);
 }
 body {
     width: 100%;
+    color: var(--light-color);
 }
 nav {
     width: 100%;
     position: fixed;
     height: 2rem;
-    background-color: aliceblue;
+    background-color: rgb(27, 32, 34);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,19 +47,16 @@ li {
     margin-top: 1rem;
 }
 .grid {
-    padding: 2.8rem 0 0 0;
-    box-sizing: border-box;
+    justify-content: center;
+    padding-top: 2rem;
     overflow: hidden;
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(8, max(12.1vw));  
-    grid-template-rows: repeat(8, max(12.1vw));    
-    gap: .8rem;
+    gap: .2rem;
+    grid-template-columns: repeat(8, 10vw);  
+    grid-template-rows: repeat(8, 10vw);    
 }
 .grid div {
     box-shadow: 3px 2px 2px var(--shadow);
-    min-width: 100%;
-    min-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -65,7 +68,7 @@ li {
     grid-column: 5 / span 1;
 }
 .tile-2 {
-    background: url(/images/tiles/nate-kennedy47.jpg);
+    background: url(/images/tiles/photography.jpg);
     grid-row: 8 / span 1;
     grid-column: 7 / span 2;
 }
@@ -75,7 +78,7 @@ li {
     grid-column: 1 / span 3;
 }
 .tile-4 {
-    background: url(/images/tiles/01-Logo-free-mockup-by-mockupcloud.png);
+    background: url(/images/tiles/sheeaun-print.png);
     grid-row: 1 / span 1;
     grid-column: 4 / span 1;
 }
@@ -93,17 +96,14 @@ li {
     background: url(/images/tiles/logan-stationary.png);
     grid-row: 2 / span 4;
     grid-column: 4 / span 2;
-    background-position: center;
-    background-repeat: repeat;
-
 }
 .tile-8 {
-    background: url(/images/tiles/IMG_5317.jpg);
+    background: url(/images/tiles/gesture.jpg);
     grid-row: 6 / span 3;
     grid-column: 1 / span 5;
 }
 .tile-9 {
-    background: url(/images/tiles/Drydens-Model.jpg.jpg);
+    background: url(/images/tiles/layout.jpg.jpg);
     grid-row: 4 / span 1;
     grid-column: 8 / span 1;
 
