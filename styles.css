@@ -9,9 +9,10 @@ font-family: yorkten-slab-normal, sans-serif; */
 }
 
 html {
-    background-color: rgb(39, 39, 39);
+    background-image: linear-gradient(to right top, #d58c1a, #e46b44, #db556a, #bc508a, #8c569c, #7e5aa6, #6c5eb0, #5363b8, #6f67cf, #9168e2, #b766f1, #e05ffb);
     --shadow: rgb(0, 0, 0);
     --light-color: rgb(224, 229, 237);
+    --gradient: linear-gradient(to left, #d58c1a, #e46b44, #db556a, #bc508a, #8c569c, #7e5aa6, #6c5eb0, #5363b8, #6f67cf, #9168e2, #b766f1, #e05ffb);
 }
 body {
     width: 100%;
@@ -21,7 +22,7 @@ nav {
     width: 100%;
     position: fixed;
     height: 2rem;
-    background-color: rgb(27, 32, 34);
+    background-image: var(--gradient);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,31 +37,35 @@ ul {
 }
 li {
     margin-top: .4rem;
-    padding: 0 1rem;
+    padding: 0 .5rem;
     font-family: good-karma-caps, sans-serif;
-    font-size: clamp(1.8rem, 2.5vw, 2.2rem);     
+    font-size: clamp(1.4rem, 2.2vw, 2.5rem);     
     display: inline-block;
 }
 .logo {
     display: inline-block;
-    width: clamp(8rem, 10rem, 12rem);
+    width: clamp(6rem, 10rem, 12rem);
     margin-top: 1rem;
 }
 .grid {
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 4rem;
     overflow: hidden;
     display: grid;
     gap: .2rem;
-    grid-template-columns: repeat(8, 10vw);  
-    grid-template-rows: repeat(8, 10vw);    
+    grid-template-columns: repeat(8, 10.2vw);  
+    grid-template-rows: repeat(19, 10.2vw);    
 }
 .grid div {
-    box-shadow: 3px 2px 2px var(--shadow);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     overflow: hidden;
+    transition: all 250ms ease-in-out;
 
+}
+.grid div:hover {
+    transform: scale(1.11);
 }
 .tile-1 {
     background: url(/images/tiles/logan_productions_logo.png);
@@ -69,8 +74,8 @@ li {
 }
 .tile-2 {
     background: url(/images/tiles/photography.jpg);
-    grid-row: 8 / span 1;
-    grid-column: 7 / span 2;
+    grid-row: 6 / span 3;
+    grid-column: 1 / span 5;
 }
 .tile-3 {
     background: url(/images/tiles/owl_walk_logo.png);
@@ -99,14 +104,14 @@ li {
 }
 .tile-8 {
     background: url(/images/tiles/gesture.jpg);
-    grid-row: 6 / span 3;
-    grid-column: 1 / span 5;
+    grid-row: 8 / span 1;
+    grid-column: 7 / span 2;
 }
 .tile-9 {
-    background: url(/images/tiles/layout.jpg.jpg);
-    grid-row: 4 / span 1;
-    grid-column: 8 / span 1;
-
+    background: url(/images/tiles/layout.jpg);
+    background-color: rgb(237, 237, 237);
+    grid-row: 17 / span 1;
+    grid-column: 1 / span 3;
 }
 .tile-10 {
     background: url(/images/tiles/chair.jpg);
@@ -122,5 +127,68 @@ li {
     background: url(/images/tiles/Resume.png);
     grid-row: 8 / span 1;
     grid-column: 6 / span 1;
+}
+.tile-13 {
+    background: url(/images/tiles/colorite_logo.png);
+    grid-row: 9 / span 2;
+    grid-column: 4 / span 2;
+}
+.tile-14 {
+    background: url(/images/tiles/slideshow.png);
+    background-color: #e0e0e0;
+    grid-row: 17 / span 1;
+    grid-column: 4 / span 5;
+}
+.tile-15 {
+    background: url(/images/tiles/nate-kennedy-24.jpg);
+    grid-row: 13 / span 3;
+    grid-column: 8 / span 1;
+}
+.tile-16 {
+    background: url(/images/tiles/No-self-Comp.png);
+    grid-row: 13 / span 2;
+    grid-column: 5 / span 3;
+}
+.tile-17 {
+    background: url(/images/tiles/PHI-comp.png);
+    grid-row: 9 / span 2;
+    grid-column: 6 / span 3;
+}
+.tile-18 {
+    background: url(/images/tiles/EAIL-docs.png);
+    grid-row: 11 / span 2;
+    grid-column: 6 / span 3;
+}
+.tile-19 {
+    background: url(/images/tiles/a1pools_website.jpg);
+    grid-row: 13 / span 4;
+    grid-column: 1 / span 4;
+}
+.tile-20 {
+    background: url(/images/tiles/rose_garden_logo.png);
+    grid-row: 11 / span 2;
+    grid-column: 1 / span 2;
+}
+.tile-21 {
+    background: url(/images/tiles/star_wind_and_solar_logo.png);
+    grid-row: 16 / span 1;
+    grid-column: 8 / span 1;
+
+}
+.tile-22 {
+    background: url(/images/tiles/T-Shirt-Back.png);
+    grid-row: 11 / span 2;
+    grid-column: 3 / span 3;
+}
+.tile-23 {
+    background: url(/images/tiles/Perspective-business-cards.png);
+    grid-row: 9 / span 2;
+    grid-column: 1 / span 3;
+}
+.tile-24 {
+    background: url(/images/tiles/BGA-Logo.png);
+    background-color: #395A97;
+    grid-row: 15 / span 2;
+    grid-column: 5 / span 3;
 }
 
