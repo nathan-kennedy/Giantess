@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
 }
-
 html {
     background-image: linear-gradient(to right top, #d58c1a, #e46b44, #db556a, #bc508a, #8c569c, #7e5aa6, #6c5eb0, #5363b8, #6f67cf, #9168e2, #b766f1, #e05ffb);
     --shadow: rgb(0, 0, 0);
@@ -25,37 +24,50 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 ul {
     padding-right: 1rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     list-style: none;
-    margin-right: 6.5%;
-  
+    margin-right: 6.7%;
 }
 li {
+    text-transform: capitalize;
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 200;
+    font-size: clamp(1rem, 1.2vw, 2rem);     
+    padding: 0 1rem;
+    height: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 200;
-    font-size: clamp(1.2rem, 1.5vw, 2rem);     
-    line-height: 2rem;
-    padding: 0 1rem;
-
-    
-    
-
 }
 li:hover {
     background-image: linear-gradient(to right top, #da1585, #d8009a, #d100b2, #c100ce, #a412eb);
     cursor: pointer;
+    color: #eed9b8;
 }
 .logo {
     display: inline-block;
     width: clamp(9rem, 14vw, 13rem);
     margin-top: 1rem;
+    transition: 150ms ease-out;
+    margin-left: 6.7%;
+}
+.logo:hover { 
+    transform: scale(1.1);
+    cursor: pointer;
+    -webkit-filter: drop-shadow(5px 5px 5px #404040);
+    filter: drop-shadow(5px 5px 5px #404040);
 }
 .grid {
     justify-content: center;
@@ -71,11 +83,17 @@ li:hover {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    transition: all 250ms ease-in-out;
-
+    transition: all 150ms ease-in-out;
 }
 .grid div:hover {
     transform: scale(1.11);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
 }
 .tile-1 {
     background: url(/images/tiles/logan_productions_logo.png);
@@ -83,7 +101,7 @@ li:hover {
     grid-column: 5 / span 1;
 }
 .tile-2 {
-    background: url(/images/tiles/photography.jpg);
+    background: url(/images/tiles/photography.jpeg);
     grid-row: 6 / span 3;
     grid-column: 1 / span 5;
 }
@@ -113,7 +131,7 @@ li:hover {
     grid-column: 4 / span 2;
 }
 .tile-8 {
-    background: url(/images/tiles/gesture.jpg);
+    background: url(/images/tiles/gesture.jpeg);
     grid-row: 8 / span 1;
     grid-column: 7 / span 2;
 }
@@ -150,7 +168,7 @@ li:hover {
     grid-column: 4 / span 5;
 }
 .tile-15 {
-    background: url(/images/tiles/nate-kennedy-24.jpg);
+    background: url(/images/tiles/nate-kennedy-24.jpeg);
     grid-row: 13 / span 3;
     grid-column: 8 / span 1;
 }
