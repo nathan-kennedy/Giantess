@@ -6,6 +6,8 @@
     padding: 0;
 }
 html {
+    scroll-behavior: smooth;
+    transition: ease-in-out;
     background-image: linear-gradient(to right top, #d58c1a, #e46b44, #db556a, #bc508a, #8c569c, #7e5aa6, #6c5eb0, #5363b8, #6f67cf, #9168e2, #b766f1, #e05ffb);
     --shadow: rgb(0, 0, 0);
     --light-color: rgb(224, 229, 237);
@@ -15,7 +17,12 @@ body {
     width: 100%;
     color: var(--light-color);
 }
+a {
+    text-decoration: none;
+    color: unset;
+}
 nav {
+    z-index: 999;
     width: 100%;
     position: fixed;
     height: 2rem;
@@ -50,24 +57,72 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: 150ms ease-out;
 }
 li:hover {
     background-image: linear-gradient(to right top, #da1585, #d8009a, #d100b2, #c100ce, #a412eb);
-    cursor: pointer;
     color: #eed9b8;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px #5f5f5fb5;
+    letter-spacing: 0em;
 }
 .logo {
     display: inline-block;
     width: clamp(9rem, 14vw, 13rem);
     margin-top: 1rem;
-    transition: 150ms ease-out;
+    cursor: pointer;
+    transition: 250ms ease-out;
     margin-left: 6.7%;
 }
 .logo:hover { 
     transform: scale(1.1);
-    cursor: pointer;
     -webkit-filter: drop-shadow(5px 5px 5px #404040);
     filter: drop-shadow(5px 5px 5px #404040);
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 86%;
+    height: 100vh;
+    margin: 0 auto;
+
+}
+.profile-pic {
+    
+}
+.headshot {
+    border-radius: 50%;
+    width: 30vw;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.bio-container {
+    color: white;
+    width: 30vw;
+    margin: 0 0 0 4rem;
+}
+.bio-title {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+    text-shadow: 5px 5px 5px #5f5f5fb5;
+
+}
+.bio {
+    font-family: "Source Code Pro", sans-serif;
+    line-height: 1.6em;
+    font-size: clamp(.5rem, 2vw, 1rem);
+
 }
 .grid {
     justify-content: center;
@@ -86,14 +141,14 @@ li:hover {
     transition: all 150ms ease-in-out;
 }
 .grid div:hover {
-    transform: scale(1.11);
+    transform: scale(1.2);
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .tile-1 {
     background: url(/images/tiles/logan_productions_logo.png);
