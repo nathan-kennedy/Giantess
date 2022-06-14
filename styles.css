@@ -64,7 +64,6 @@ li:hover {
     color: #eed9b8;
     font-size: 1.6rem;
     cursor: pointer;
-    font-weight: 700;
     text-shadow: 5px 5px 5px #5f5f5fb5;
     letter-spacing: 0em;
 }
@@ -115,7 +114,7 @@ li:hover {
     font-weight: 700;
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 2rem;
-    text-shadow: 5px 5px 5px #5f5f5fb5;
+    text-shadow: 5px 5px 5px #551b81b5;
 
 }
 .bio {
