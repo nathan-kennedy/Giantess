@@ -64,6 +64,7 @@ li:hover {
     color: #eed9b8;
     font-size: 1.6rem;
     cursor: pointer;
+    font-weight: 700;
     text-shadow: 5px 5px 5px #5f5f5fb5;
     letter-spacing: 0em;
 }
@@ -95,7 +96,7 @@ li:hover {
 }
 .headshot {
     border-radius: 50%;
-    width: 30vw;
+    width: 20vw;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -106,16 +107,15 @@ li:hover {
 }
 .bio-container {
     color: white;
-    width: 30vw;
+    width: 40vw;
     margin: 0 0 0 4rem;
 }
 .bio-title {
     font-family: "Exo 2", sans-serif;
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 2rem;
+    font-size: clamp(2rem, 3.5vw, 4rem);
     text-shadow: 5px 5px 5px #551b81b5;
-
+    line-height: 3.5rem;
 }
 .bio {
     font-family: "Source Code Pro", sans-serif;
